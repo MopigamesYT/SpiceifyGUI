@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Spicetify GUI</title>
+        <meta name="description" content="">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+
+        <button onclick="startBat()" class="button">Dev button - Launch bat file</button>
+        <script src="" async defer></script>
+    </body>
+    <script>
+      const ipc = require("electron").ipcRenderer;
+    </script>
+    <style>
+        .button {
+    background: #1ed760;
+    color: white;
+    border-radius: 12px;
+    padding: 15px 32px;
+    border: 1px
+ solid #1ed760;
+}
+.button:hover {
+    background: #1ab450;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 12px;
+    border: 1px
+ solid #1ab450;
+}
+.button:active {
+    background: #0e632c;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 12px;
+    border: 1px
+ solid #0e632c;
+}
+body {
+  background-color: #222322;
+}
+    </style>
+
+</html>
