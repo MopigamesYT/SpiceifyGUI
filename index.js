@@ -2,9 +2,35 @@
 // Importation des modules
 const { app, ipcMain, BrowserWindow } = require("electron");
 const path = require("path");
+const process = require('child_process');
 
 // Variables globales
 let mainWindow;
+
+
+
+//test
+ipcMain.on("batlaunchbtn", () => {   
+var ls = process.spawn('script.bat');
+
+  function Process() {
+    ls.stdout.on('data', function (data) {
+      console.log(data);
+    });
+    ls.stderr.on('data', function (data) {
+      console.log(data);
+    });
+    ls.on('close', function (code) {
+       if (code == 0)
+            console.log('Stop');
+       else
+            console.log('Start');
+    });
+};
+
+Process();
+});
+
 
 // Création de la fenêtre principale
 function createWindow() {
@@ -16,11 +42,14 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: true,
       enableRemoteModule: true,
+      contextIsolation: true,
+      sandbox: true
     },
   });
 
   mainWindow.loadURL(path.join(__dirname, "index.html"));
 }
+
 
 // Quand l'application est chargée, afficher la fenêtre
 app.whenReady().then(() => {

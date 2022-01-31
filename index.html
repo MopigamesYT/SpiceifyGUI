@@ -10,19 +10,32 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
-    <body>
-
-
-        <button onclick="startBat()" class="button">Dev button - Launch bat file</button>
-        <script src="" async defer></script>
-    </body>
     <script>
       const ipc = require("electron").ipcRenderer;
+      const process = require('child_process');   
     </script>
+    <body>
+
+        <button id="batlaunch" class="button">Appliquer le thème</button>
+        <div class="nav-bar"></div>
+        <input id="file" style = "position:absolute; top:130px;" class="input-file" type="file">
+        <script>
+            
+let btn = document.getElementById("batlaunch");
+btn.addEventListener('click', function () {
+    ipcRenderer.send('batlaunchbtn');
+});
+        </script>
+        <script src="" async defer>
+        </script>
+    </body>
     <style>
         .button {
     background: #1ed760;
     color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 12px;
     padding: 15px 32px;
     border: 1px
@@ -46,6 +59,19 @@
 }
 body {
   background-color: #222322;
+}
+.nav-bar {
+  width:50%;
+  margin-left: auto;
+  margin-right: auto;
+  height:10px;
+  border-bottom: 1px solid rgba(255,255,255,.25);
+}
+
+
+.input-file {
+    margin-left: auto;
+    margin-right: auto;
 }
     </style>
 
