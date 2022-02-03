@@ -2,18 +2,15 @@
 // Importation des modules
 const { app, ipcMain, BrowserWindow } = require("electron");
 const path = require("path");
-const process = require('child_process');
 
 // Variables globales
 let mainWindow;
 
-
-
 //test
-ipcMain.on("batlaunchbtn", () => {   
-var ls = process.spawn('script.bat');
-
+ipcMain.on('start', (event, data) => {   
   function Process() {
+    const process = require('child_process');   
+    var ls = process.spawn('script.bat');
     ls.stdout.on('data', function (data) {
       console.log(data);
     });
@@ -30,7 +27,6 @@ var ls = process.spawn('script.bat');
 
 Process();
 });
-
 
 // Création de la fenêtre principale
 function createWindow() {

@@ -18,12 +18,23 @@
 
         <button id="batlaunch" class="button">Appliquer le thème</button>
         <div class="nav-bar"></div>
-        <input id="file" style = "position:absolute; top:130px;" class="input-file" type="file">
+        <div>
+            <input type="radio" id="contactChoice1"
+            name="contact" value="email" checked>
+           <label for="contactChoice1">Choix par fichier (.zip)</label>
+        <input id="file" style = "position:absolute; top:130px;" class="button" type="file">
+
+
+        
+            <input type="radio" id="contactChoice2"
+             name="contact" value="telephone">
+            <label for="contactChoice2">Choix par thèmes récents</label>
+</div>        
         <script>
-            
+const {ipcRenderer} = require('electron');
 let btn = document.getElementById("batlaunch");
 btn.addEventListener('click', function () {
-    ipcRenderer.send('batlaunchbtn');
+    ipcRenderer.send("start");
 });
         </script>
         <script src="" async defer>
@@ -72,6 +83,10 @@ body {
 .input-file {
     margin-left: auto;
     margin-right: auto;
+}
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+    color: white;
 }
     </style>
 
