@@ -1,1 +1,0 @@
-md %userprofile%\desktop\test
