@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Spicetify GUI</title>
+        <meta name="description" content="">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+    </body>
+    <style>
+hr.rounded {
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    background: rgba(128, 255, 0, 0);
+    border: rgba(255, 240, 245, 0);
+  border-top: 3px solid rgb(72, 72, 72);
+  border-radius: 4px;
+}
+        .button {
+            -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    background: #1ed760;
+    color: rgb(0, 0, 0);
+    border-radius: 12px;
+    padding: 15px 32px;
+    display: block;
+    margin:  auto;
+    border: 1px
+ solid #1ed760;
+        }
+.settingsbtn {
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+ height: 25px;
+ width: 25px;
+}
+.button:hover {
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    background: #1ab450;
+    color: black;
+    padding: 15px 32px;
+    border-radius: 12px;
+    border: 1px
+ solid #1ab450;
+}
+
+.button:active {
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+    background: #0e632c;
+    color: black;
+    padding: 15px 32px;
+    border-radius: 12px;
+    border: 1px
+ solid #0e632c;
+}
+.text {
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+  margin-left: auto;
+    margin-right: auto;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #222322;
+}
+    </style>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Spicetify GUI</title>
+        <meta name="description" content="">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+
+        <img class="settingsbtn" src="../asset/settings.png" alt="Settings icon" id="settings">
+        <button class="button" id="installspicetify">Installer Spicetify + Marketplace</button>
+        <br>
+        <hr class="rounded">
+        <br>
+        <button class="button" id="sa">Spicetify upgrade</button>
+        <br>
+        <button class="button" id="sba">Spicetify backup apply</button>
+        <br>
+        <hr class="rounded">
+        <br>
+        <div class="text" id="themeapply">Glissez-déposez un thème dans la fenêtre puis cliquez ici pour l'appliquer (format .zip)</div>
+        <br>
+        <button class="button">Appliquer le thème</button>
+        <script src="renderer.js" defer></script>
+    </body>
+</html>

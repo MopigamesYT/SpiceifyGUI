@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "exec": "^0.2.1",
+    "ipc": "^0.0.1",
+    "node-gyp": "^9.0.0",
+    "node-powershell": "^5.0.1",
+    "request": "^2.88.2",
+    "require": "^2.4.20"
+  },
+  "name": "spicetifyguimod",
+  "description": "Simple GUI for Spicetify made with Electron. Only french avalible for now, other languages will be added later",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "electron": "^16.0.8",
+    "electron-builder": "^22.14.5",
+    "electron-reload": "^2.0.0-alpha.1"
+  },
+  "scripts": {
+    "test": "electron .",
+    "buildW": "electron-builder build -w",
+    "buildM": "electron-builder build -m",
+    "buildL": "electron-builder build -l"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MopigamesYT/SpicetifyGuiMod.git"
+  },
+  "author": "Mopigames",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MopigamesYT/SpicetifyGuiMod/issues"
+  },
+  "homepage": "https://github.com/MopigamesYT/SpicetifyGuiMod#readme"
+}
